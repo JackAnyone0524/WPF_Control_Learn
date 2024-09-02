@@ -1,0 +1,56 @@
+﻿<Page x:Class="WPF_Study.Views.TextBlock"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:WPF_Study.Views"
+      mc:Ignorable="d"
+     d:DesignHeight="1000" d:DesignWidth="1660"
+      Title="Canvas">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid   Grid.Row="0" Grid.Column="1" Background="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.2*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <TextBlock  Grid.Row="0" FontSize="30" Background="Yellow" ><Run Text="RichTextBox" /><Run Language="zh-cn" Text=":" /><Run Text="复杂文本编辑器: 可以用于开发类似于文本编辑器的应用程序，允许用户输入并格式化文本。" /><LineBreak /><Run Text="RichTextBox" /><Run Language="zh-cn" Text=":" /><Run Text="文档查看器: 用于显示带有格式的文档内容，如帮助文档或富文本内容。" /><LineBreak /><Run /></TextBlock>
+
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.5*"></RowDefinition>
+                    <RowDefinition Height="0.5*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock  Text="TextBlock:用于显示只读文本" Grid.Row="0" Grid.Column="0" Height="100" Width="200" Background="Red"></TextBlock>
+                <TextBox  TextWrapping="Wrap" Text="TextBox:显示和输入" Grid.Row="0" Grid.Column="1" Background="Yellow" Height="100" Width="200"></TextBox>
+
+                <RichTextBox Name="myRichTextBox" Margin="10" Grid.Row="1" Grid.Column="0" Background="Gray" Height="300" Width="600">
+                    <!-- 在 XAML 中直接定义格式化文本 -->
+                    <FlowDocument>
+                        <Paragraph>
+                            <Run Text="This is a " FontWeight="Bold" />
+                            <Run Text="RichTextBox" FontStyle="Italic" />
+                            <Run Text=" example with " Foreground="Blue" />
+                            <Run Text="formatted text." FontSize="16" />
+                        </Paragraph>
+                        <Paragraph>
+                            <Run Text="You can add more content here." />
+                        </Paragraph>
+                    </FlowDocument>
+                </RichTextBox>
+
+                <Label Content="密码输入框" Grid.Row="1" Grid.Column="1"   FontSize="50"></Label>
+                <PasswordBox Grid.Row="1" Grid.Column="1" Background="Green" Height="100" Width="200"></PasswordBox>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

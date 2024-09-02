@@ -1,0 +1,36 @@
+﻿<Page x:Class="WPF_Study.Views.UniformGrid"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:WPF_Study.Views"
+      mc:Ignorable="d"
+        d:DesignHeight="1000" d:DesignWidth="1660"
+      Title="Canvas">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid   Grid.Row="0" Grid.Column="1" Background="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.1*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <TextBlock  Grid.Row="0" FontSize="30" Background="Yellow" ><Run Text="均匀布局：UniformGrid 适合将一组控件均匀地排列在网格中，常用于数字键盘、棋盘布局或工具面板。" /><LineBreak /><Run Text="自动调整：UniformGrid 会自动调整子元素的大小和位置，以确保它们在整个网格中均匀分布，简化了布局管理。" /><LineBreak /><Run /></TextBlock>
+            <UniformGrid  Grid.Row="1"  Rows="3" Columns="3" HorizontalAlignment="Center" VerticalAlignment="Center" Height="800" Width="800">
+                <!-- 九个按钮均匀分布在3x3的网格中 -->
+                <Button Content="Button 1" Background="LightCoral" />
+                <Button Content="Button 2" Background="LightSeaGreen" />
+                <Button Content="Button 3" Background="LightSkyBlue" />
+                <Button Content="Button 4" Background="LightSalmon" />
+                <Button Content="Button 5" Background="LightSteelBlue" />
+                <Button Content="Button 6" Background="LightGoldenrodYellow" />
+                <Button Content="Button 7" Background="LightGreen" />
+                <Button Content="Button 8" Background="LightPink" />
+                <Button Content="Button 9" Background="LightSlateGray" />
+            </UniformGrid>
+        </Grid>
+    </Grid>
+</Page>

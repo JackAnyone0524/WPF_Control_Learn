@@ -1,0 +1,123 @@
+﻿<Page x:Class="WPF_Study.Views.ProgressBar"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d"
+       d:DesignHeight="1000" d:DesignWidth="1660"
+      Title="Canvas">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Row="0" Grid.Column="1" Background="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.2*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" FontSize="30" Background="Yellow" Text="ToolTi  ：悬浮提示"/>
+
+            <Grid Grid.Row="1" ShowGridLines="True">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.5*"></RowDefinition>
+                    <RowDefinition Height="0.5*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <GroupBox Header="ProgressBar" Grid.Row="0" Grid.Column="0">
+                    <StackPanel>
+                        <ProgressBar Name="myProgressBar" Grid.Row="0" Height="30" Minimum="0" Maximum="100" Value="0" Margin="10" />
+
+                        <!-- 显示进度的 TextBlock -->
+                        <TextBlock Name="progressText" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" />
+                        <!-- 控制进度的按钮 -->
+                        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+                            <Button Content="Increase" Click="IncreaseButton_Click" Width="75" Margin="5" />
+                            <Button Content="Decrease" Click="DecreaseButton_Click" Width="75" Margin="5" />
+                        </StackPanel>
+                    </StackPanel>
+                </GroupBox>
+
+                <GroupBox Header="StatusBar" Grid.Row="0" Grid.Column="1">
+                    <DockPanel>
+                        <!-- 状态栏 -->
+                        <StatusBar DockPanel.Dock="Bottom" Name="mainStatusBar" FontSize="30">
+                            <!-- 状态信息 -->
+                            <StatusBarItem>
+                                <TextBlock Text="Ready" />
+                            </StatusBarItem>
+                            <!-- 进度条 -->
+                            <StatusBarItem>
+                                <ProgressBar Name="statusProgressBar" Width="100" Height="16" Minimum="0" Maximum="100" Value="50" />
+                            </StatusBarItem>
+                            <!-- 当前时间 -->
+                            <StatusBarItem HorizontalAlignment="Right">
+                                <TextBlock Name="timeTextBlock" />
+                            </StatusBarItem>
+                        </StatusBar>
+                        <!-- 主界面内容 -->
+                        <Grid>
+                            <Button Content="Increase Progress" Width="150" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Click="IncreaseProgressButton_Click"/>
+                        </Grid>
+                    </DockPanel>
+                </GroupBox>
+
+                <GroupBox Header="ToolTip" Grid.Row="1" Grid.Column="0">
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <Button Content="Hover over me" Width="150" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20">
+                            <Button.ToolTip>
+                                <ToolTip Content="This is a simple tooltip for the button."/>
+                            </Button.ToolTip>
+                        </Button>
+
+                        <!-- 文本框与工具提示 -->
+                        <TextBox Width="150" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="20">
+                            <TextBox.ToolTip>
+                                <ToolTip Content="Enter your text here."/>
+                            </TextBox.ToolTip>
+                        </TextBox>
+
+                        <!-- 图像与工具提示 -->
+                        <Image Source="../Images/sample.png" Width="100" Height="100" HorizontalAlignment="Center" VerticalAlignment="Bottom" >
+                            <Image.ToolTip>
+                                <ToolTip>
+                                    <StackPanel>
+                                        <TextBlock Text="This is an image of a sample." FontWeight="Bold"/>
+                                        <TextBlock Text="Size: 100x100 pixels" />
+                                    </StackPanel>
+                                </ToolTip>
+                            </Image.ToolTip>
+                        </Image>
+                    </StackPanel>
+                </GroupBox>
+
+                <GroupBox Header="ToolBar" Grid.Row="1" Grid.Column="1">
+                    <DockPanel VerticalAlignment="Top" HorizontalAlignment="Stretch">
+                        <ToolBarTray DockPanel.Dock="Top">
+                            <ToolBar>
+                               
+                                <Button Content="Open" ToolTip="Open an existing file" Width="50" Height="30"/>
+                                <Button Content="Save" ToolTip="Save the current file" Width="50" Height="30"/>
+                                <Separator/>
+                                <ComboBox Width="100">
+                                    <ComboBoxItem>Option 1</ComboBoxItem>
+                                    <ComboBoxItem>Option 2</ComboBoxItem>
+                                    <ComboBoxItem>Option 3</ComboBoxItem>
+                                </ComboBox>
+                                <TextBox Width="100" Height="30" Margin="10,0,0,0"/>
+                                <Separator/>
+                                <Button Content="Help" ToolTip="Get help" Width="50" Height="30"/>
+                            </ToolBar>
+                        </ToolBarTray>
+                        <TextBlock Text="This is a demo for a ToolBar." HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="16" Margin="10"/>
+                    </DockPanel>
+                </GroupBox>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

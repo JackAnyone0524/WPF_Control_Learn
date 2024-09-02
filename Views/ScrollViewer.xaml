@@ -1,0 +1,61 @@
+﻿<Page x:Class="WPF_Study.Views.ScrollViewer"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:WPF_Study.Views"
+      mc:Ignorable="d"
+        d:DesignHeight="1000" d:DesignWidth="1660"
+      Title="Canvas">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid   Grid.Row="0" Grid.Column="1" Background="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.4*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <TextBlock  Grid.Row="0" FontSize="30" Background="Yellow" TextWrapping="Wrap" ><Run Text="CanContentScroll 使用 true(默认行为)：当你的内容是由多个逻辑项组成，比如一个 ListBox 或 TreeView，你希望每次滚动时能完全显示一个新的项，而不是部分项。" /><LineBreak /><Run Text="CanContentScroll 使用 false：当你的内容需要精细的滚动控制，尤其是对于那些没有明确逻辑结构的内容时，比如图像或者纯文本内容。" /><LineBreak /><Run Text="水平" /><Run Text="：" /><Run Text="HorizontalScrollBarVisibility" /><Run Text="          垂直：" /><Run Text="VerticalScrollBarVisibility" /><LineBreak /><Run Text="Auto: 滚动条在需要时显示。                   Disabled: 滚动条禁用且不可见。" /><LineBreak /><Run Text="Hidden: 滚动条隐藏，但仍可滚动内容。 " /><Run Language="zh-cn" Text=" " /><Run Text="Visible: 滚动条始终可见。" /><LineBreak /><Run /></TextBlock>
+            <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Auto"  VerticalScrollBarVisibility="Auto" CanContentScroll="True" FontSize="50">
+                <!-- Scro llViewer 的内容 -->
+                <StackPanel>
+                    <!-- 模拟大量内容 -->
+                    <TextBlock Text="Line 1: 内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容" Margin="10" />
+                    <TextBlock Text="Line 2: 内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容" Margin="10" />
+                    <TextBlock Text="Line 3: 内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容" Margin="10" />
+                    <TextBlock Text="Line 4: 内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容" Margin="10" />
+                    <TextBlock Text="Line 5: 内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容" Margin="10" />
+                    <TextBlock Text="Line 6: 内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容" Margin="10" />
+                    <TextBlock Text="Line 7: 内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容" Margin="10" />
+                    <TextBlock Text="Line 8: 内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容" Margin="10" />
+                    <TextBlock Text="Line 9: 内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容" Margin="10" />
+                    <TextBlock Text="Line 10:内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容" Margin="10" />
+                    <TextBlock Text="Line 11:内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容" Margin="10" />
+                    <TextBlock Text="Line 12:内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容" Margin="10" />
+                    <TextBlock Text="Line 13:内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容" Margin="10" />
+                    <TextBlock Text="Line 14:内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容" Margin="10" />
+                    <TextBlock Text="Line 15:内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容" Margin="10" />
+                    <TextBlock Text="Line 16:内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容" Margin="10" />
+                    <TextBlock Text="Line 17:内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容" Margin="10" />
+                    <TextBlock Text="Line 18:内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容" Margin="10" />
+                    <TextBlock Text="Line 19:内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容" Margin="10" />
+                    <TextBlock Text="Line 20:内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容" Margin="10" />
+                    <TextBlock Text="Line 30:内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容" Margin="10" />
+                    <TextBlock Text="Line 31:内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容" Margin="10" />
+                    <TextBlock Text="Line 32:内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容" Margin="10" />
+                    <TextBlock Text="Line 33:内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容" Margin="10" />
+                    <TextBlock Text="Line 34:内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容" Margin="10" />
+                    <TextBlock Text="Line 35:内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容" Margin="10" />
+                    <TextBlock Text="Line 36:内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容" Margin="10" />
+                    <TextBlock Text="Line 37:内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容" Margin="10" />
+                    <TextBlock Text="Line 38:内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容" Margin="10" />
+                    <TextBlock Text="Line 39:内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容" Margin="10" />
+                    <TextBlock Text="Line 30:内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容" Margin="10" />
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</Page>

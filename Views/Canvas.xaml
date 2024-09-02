@@ -1,0 +1,37 @@
+﻿<Page x:Class="WPF_Study.Views.Canvas"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:WPF_Study.Views"
+      mc:Ignorable="d"
+        d:DesignHeight="1000" d:DesignWidth="1660"
+      Title="Canvas">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid   Grid.Row="0" Grid.Column="1" Background="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.2*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <TextBlock  Grid.Row="0" FontSize="30" Background="Yellow" ><Run Text="Canvas.Left=&quot;50&quot;" /><Run Language="zh-cn" Text="  。" /><Run Text="Canvas.Left/Right/Top/Bottom" /><LineBreak /><Run Text="精确定位：Canvas 允许在固定位置放置控件，适合在需要绝对定位的场景下使用，或复杂的自由布局。" /><LineBreak /><Run Text="重叠控件：Canvas 可以让控件相互重叠，适合创建需要层叠效果的 UI" /></TextBlock>
+            <Canvas  Grid.Row="1" Background="LightGray">
+                <!-- 位置在 (50, 30) 的按钮 -->
+                <Button Content="Button 1" Width="100" Height="50" Canvas.Left="50" Canvas.Top="30" />
+
+                <!-- 位置在 (200, 100) 的文本框 -->
+                <TextBox Text="TextBox" Width="150" Canvas.Left="200" Canvas.Top="100" />
+
+                <!-- 位置在右下角，距离右边和下边均为 20 的文本块 -->
+                <TextBlock Text="Right-Bottom" Canvas.Right="20" Canvas.Bottom="20" FontSize="16" FontWeight="Bold" />
+
+                <!-- 位置在 (100, 200) 的复选框 -->
+                <CheckBox Content="Check me" Canvas.Left="100" Canvas.Top="200" />
+            </Canvas>
+        </Grid>
+    </Grid>
+</Page>

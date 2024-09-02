@@ -1,0 +1,50 @@
+﻿<Page x:Class="WPF_Study.Views.WrapPanel"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:WPF_Study.Views"
+      mc:Ignorable="d"
+       d:DesignHeight="1000" d:DesignWidth="1660"
+      Title="StackPanel">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid   Grid.Row="0" Grid.Column="1" Background="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.2*"></RowDefinition>
+                <RowDefinition Height="0.3*"></RowDefinition>
+                <RowDefinition Height="0.5*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <TextBlock  Grid.Row="0" FontSize="30" Background="Yellow" ><Run Text="Orientation=&quot;Vertical&quot;：垂直排列（默认）" /><Run Text="/Orientation=&quot;Horizontal&quot;：水平排列" /><LineBreak /><Run Language="zh-cn" Text="自动占据下一行或者列" /></TextBlock>
+            <WrapPanel  Grid.Row="1"  Orientation="Horizontal" Background="Red">
+                <Button Content="123" FontSize="30" Height="51" Width="200" Margin="10" />
+                <Button Content="123" FontSize="30" Height="51" Width="200" Margin="10" />
+                <Button Content="123" FontSize="30" Height="51" Width="200" Margin="10" />
+                <Button Content="123" FontSize="30" Height="51" Width="200" Margin="10" />
+                <Button Content="123" FontSize="30" Height="51" Width="200" Margin="10" />
+                <Button Content="123" FontSize="30" Height="51" Width="200" Margin="10" />
+                <Button Content="123" FontSize="30" Height="51" Width="200" Margin="10" />
+                <Button Content="123" FontSize="30" Height="51" Width="200" Margin="10" />
+                <Button Content="123" FontSize="30" Height="51" Width="200" Margin="10" />
+                <Button Content="123" FontSize="30" Height="51" Width="200" Margin="10" />
+            </WrapPanel>
+
+            <WrapPanel  Grid.Row="2"  Orientation="Vertical" Background="Green">
+                <Button Content="123" FontSize="30" Height="51" Width="200" Margin="10" />
+                <Button Content="123" FontSize="30" Height="51" Width="200" Margin="10" />
+                <Button Content="123" FontSize="30" Height="51" Width="200" Margin="10" />
+                <Button Content="123" FontSize="30" Height="51" Width="200" Margin="10" />
+                <Button Content="123" FontSize="30" Height="51" Width="200" Margin="10" />
+                <Button Content="123" FontSize="30" Height="51" Width="200" Margin="10" />
+                <Button Content="123" FontSize="30" Height="51" Width="200" Margin="10" />
+                <Button Content="123" FontSize="30" Height="51" Width="200" Margin="10" />
+                <Button Content="123" FontSize="30" Height="51" Width="200" Margin="10" />
+                <Button Content="123" FontSize="30" Height="51" Width="200" Margin="10" />
+            </WrapPanel>
+        </Grid>
+    </Grid>
+</Page>

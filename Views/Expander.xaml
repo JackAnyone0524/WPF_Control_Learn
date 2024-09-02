@@ -1,0 +1,35 @@
+﻿<Page x:Class="WPF_Study.Views.Expander"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:WPF_Study.Views"
+      mc:Ignorable="d"
+        d:DesignHeight="1000" d:DesignWidth="1660"
+      Title="Canvas">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid   Grid.Row="0" Grid.Column="1" Background="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.1*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <TextBlock  Grid.Row="0" FontSize="30" Background="Yellow" ><Run Language="zh-cn" Text="折叠容器。属性IsExpanded可以设置TRUE或者FAlse、是否展开" /></TextBlock>
+            <Expander Header="More Details"  Grid.Row="1" IsExpanded="True"
+                  HorizontalAlignment="Center" VerticalAlignment="Center"
+                  Width="300">
+                <StackPanel>
+                    <!-- 展开后的内容 -->
+                    <TextBlock Text="Here are some additional details..." Margin="5" />
+                    <TextBlock Text="Detail 1: Lorem ipsum dolor sit amet." Margin="5" />
+                    <TextBlock Text="Detail 2: Consectetur adipiscing elit." Margin="5" />
+                    <TextBlock Text="Detail 3: Integer nec odio." Margin="5" />
+                </StackPanel>
+            </Expander>
+        </Grid>
+    </Grid>
+</Page>

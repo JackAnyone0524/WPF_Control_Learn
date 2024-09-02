@@ -1,0 +1,76 @@
+﻿<Window x:Class="WPF_Study.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        WindowState="Maximized"
+        Title="WPF知识结构" Height="1048" Width="1920">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.2*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <TreeView Name="MyTreeView" Grid.Row="0" Grid.Column="0" Loaded="TreeView_Loaded" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+
+            <TreeViewItem Header="WPF控件" Tag="1"  Style="{StaticResource CustomTreeViewItemStyle}">
+                <!-- 容器控件 -->
+                <TreeViewItem Header="1.容器控件" Tag="1"  Style="{StaticResource CustomTreeViewItemStyle}">
+                    <TreeViewItem Header="1.1 Grid" Tag="1.1" MouseDoubleClick="TreeViewItem_MouseDoubleClick" Style="{StaticResource CustomTreeViewItemStyle}" />
+                    <TreeViewItem Header="1.2 StackPanel" Tag="1.2" MouseDoubleClick="TreeViewItem_MouseDoubleClick" Style="{StaticResource CustomTreeViewItemStyle}" />
+                    <TreeViewItem Header="1.3 Canvas" Tag="1.3" MouseDoubleClick="TreeViewItem_MouseDoubleClick" Style="{StaticResource CustomTreeViewItemStyle}" />
+                    <TreeViewItem Header="1.4 DockPanel" Tag="1.4" MouseDoubleClick="TreeViewItem_MouseDoubleClick" Style="{StaticResource CustomTreeViewItemStyle}" />
+                    <TreeViewItem Header="1.5 WrapPanel" Tag="1.5" MouseDoubleClick="TreeViewItem_MouseDoubleClick" Style="{StaticResource CustomTreeViewItemStyle}" />
+                    <TreeViewItem Header="1.6 UniformGrid" Tag="1.6" MouseDoubleClick="TreeViewItem_MouseDoubleClick" Style="{StaticResource CustomTreeViewItemStyle}" />
+                    <TreeViewItem Header="1.7 GroupBox" Tag="1.7" MouseDoubleClick="TreeViewItem_MouseDoubleClick" Style="{StaticResource CustomTreeViewItemStyle}" />
+                    <TreeViewItem Header="1.8 Expander" Tag="1.8" MouseDoubleClick="TreeViewItem_MouseDoubleClick" Style="{StaticResource CustomTreeViewItemStyle}" />
+                    <TreeViewItem Header="1.9 ScrollViewer" Tag="1.9" MouseDoubleClick="TreeViewItem_MouseDoubleClick" Style="{StaticResource CustomTreeViewItemStyle}" />
+                    <TreeViewItem Header="1.10 Viewbox" Tag="1.10" MouseDoubleClick="TreeViewItem_MouseDoubleClick" Style="{StaticResource CustomTreeViewItemStyle}" />
+                </TreeViewItem>
+
+                <!-- 文本控件 -->
+                <TreeViewItem Header="2.文本控件" Tag="2"   Style="{StaticResource CustomTreeViewItemStyle}">
+                    <TreeViewItem Header="2.1 TextBlock" Tag="2.1" MouseDoubleClick="TreeViewItem_MouseDoubleClick" Style="{StaticResource CustomTreeViewItemStyle}" />
+                </TreeViewItem>
+
+                <!-- 按钮控件 -->
+                <TreeViewItem Header="3.按钮控件" Tag="3" Style="{StaticResource CustomTreeViewItemStyle}">
+                    <TreeViewItem Header="3.1 Button" Tag="3.1" MouseDoubleClick="TreeViewItem_MouseDoubleClick" Style="{StaticResource CustomTreeViewItemStyle}" />
+                </TreeViewItem>
+                <!-- 数据控件 -->
+                <TreeViewItem Header="4.数据控件" Tag="4" Style="{StaticResource CustomTreeViewItemStyle}">
+                    <TreeViewItem Header="4.1 ListBox" Tag="4.1" MouseDoubleClick="TreeViewItem_MouseDoubleClick" Style="{StaticResource CustomTreeViewItemStyle}" />
+                </TreeViewItem>
+
+                <!-- 图形和媒体控件 -->
+                <TreeViewItem Header="5.图形和媒体控件" Tag="5"  Style="{StaticResource CustomTreeViewItemStyle}">
+                    <TreeViewItem Header="5.1 Image" Tag="5.1" MouseDoubleClick="TreeViewItem_MouseDoubleClick" Style="{StaticResource CustomTreeViewItemStyle}" />
+                </TreeViewItem>
+
+                <!-- 选择控件 -->
+                <TreeViewItem Header="6.选择控件" Tag="6" Style="{StaticResource CustomTreeViewItemStyle}">
+                    <TreeViewItem Header="6.1 DatePicker" Tag="6.1" MouseDoubleClick="TreeViewItem_MouseDoubleClick" Style="{StaticResource CustomTreeViewItemStyle}" />
+                </TreeViewItem>
+
+                <!-- 导航控件 -->
+                <TreeViewItem Header="7.导航控件" Tag="7" Style="{StaticResource CustomTreeViewItemStyle}">
+                    <TreeViewItem Header="7.1 TabControl" Tag="7.1" MouseDoubleClick="TreeViewItem_MouseDoubleClick" Style="{StaticResource CustomTreeViewItemStyle}" />
+                    <TreeViewItem Header="7.2 Page1" Tag="7.2" MouseDoubleClick="TreeViewItem_MouseDoubleClick" Style="{StaticResource CustomTreeViewItemStyle}" />
+                </TreeViewItem>
+
+                <!-- 状态和信息控件 -->
+                <TreeViewItem Header="8.状态和信息控件" Tag="8" Style="{StaticResource CustomTreeViewItemStyle}">
+                    <TreeViewItem Header="8.1 ProgressBar" Tag="8.1" MouseDoubleClick="TreeViewItem_MouseDoubleClick" Style="{StaticResource CustomTreeViewItemStyle}" />
+                </TreeViewItem>
+
+                <!-- 对话框控件 -->
+                <TreeViewItem Header="9.对话框控件" Tag="9"  Style="{StaticResource CustomTreeViewItemStyle}">
+                    <TreeViewItem Header="9.1 MessageBoxDemo" Tag="9.1" MouseDoubleClick="TreeViewItem_MouseDoubleClick" Style="{StaticResource CustomTreeViewItemStyle}" />
+                </TreeViewItem>
+            </TreeViewItem>
+        </TreeView>
+
+        <TabControl x:Name="MyTabControl" Grid.Row="0" Grid.Column="1" Background="White"></TabControl>
+    </Grid>
+</Window>

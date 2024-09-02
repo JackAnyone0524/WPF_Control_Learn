@@ -1,0 +1,6 @@
+﻿<NavigationWindow x:Class="WPF_Study.Views.MainNavigationWindow"
+                  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                  Title="Main Navigation Window" Height="450" Width="800"
+                  Source="Views/Page1.xaml">
+</NavigationWindow>
